@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -23,15 +24,23 @@
                                 <rect key="frame" x="0.0" y="-169" width="676" height="169"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2pS-5F-cLN" secondAttribute="height" multiplier="4:1" id="Z57-Pa-jsl"/>
+                                    <constraint firstAttribute="width" secondItem="2pS-5F-cLN" secondAttribute="height" multiplier="200:49" id="tNq-SL-awl"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Z57-Pa-jsl"/>
+                                        <exclude reference="tNq-SL-awl"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Z57-Pa-jsl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="196"/>
+                                    <mask key="constraints">
+                                        <include reference="tNq-SL-awl"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -66,6 +75,21 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2pS-5F-cLN"/>
+                                <include reference="2bP-BX-W2F"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3HL-Hq-M8b"/>
+                                <include reference="uy6-Hn-fOh"/>
+                                <include reference="xpc-7g-lke"/>
+                                <include reference="47n-Vl-Iuk"/>
+                                <include reference="GcR-kl-51X"/>
+                                <include reference="je1-CB-osh"/>
+                                <include reference="uMW-en-Qli"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="2pS-5F-cLN"/>
                                 <include reference="2bP-BX-W2F"/>
