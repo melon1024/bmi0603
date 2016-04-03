@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -37,8 +37,7 @@
                                         <include reference="Z57-Pa-jsl"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="800" height="196"/>
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="tNq-SL-awl"/>
                                     </mask>
@@ -68,10 +67,10 @@
                                 <exclude reference="3HL-Hq-M8b"/>
                                 <exclude reference="uy6-Hn-fOh"/>
                                 <exclude reference="xpc-7g-lke"/>
+                                <exclude reference="uMW-en-Qli"/>
                                 <exclude reference="47n-Vl-Iuk"/>
                                 <exclude reference="GcR-kl-51X"/>
                                 <exclude reference="je1-CB-osh"/>
-                                <exclude reference="uMW-en-Qli"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -83,10 +82,10 @@
                                 <include reference="3HL-Hq-M8b"/>
                                 <include reference="uy6-Hn-fOh"/>
                                 <include reference="xpc-7g-lke"/>
+                                <include reference="uMW-en-Qli"/>
                                 <include reference="47n-Vl-Iuk"/>
                                 <include reference="GcR-kl-51X"/>
                                 <include reference="je1-CB-osh"/>
-                                <include reference="uMW-en-Qli"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -98,10 +97,10 @@
                                 <include reference="3HL-Hq-M8b"/>
                                 <include reference="uy6-Hn-fOh"/>
                                 <include reference="xpc-7g-lke"/>
+                                <include reference="uMW-en-Qli"/>
                                 <include reference="47n-Vl-Iuk"/>
                                 <include reference="GcR-kl-51X"/>
                                 <include reference="je1-CB-osh"/>
-                                <include reference="uMW-en-Qli"/>
                             </mask>
                         </variation>
                     </view>
