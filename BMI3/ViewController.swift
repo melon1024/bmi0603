@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var bmiLabel: UILabel!
+    
+    
+    @IBOutlet weak var heightTextField: UITextField!
+    
+    
+    @IBOutlet weak var weightTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
