@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     
     var weight : Double? = 0.0
@@ -31,6 +31,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var weightTextField: UITextField!
+    
+    
+    
+    @IBOutlet weak var heightPickerView: UIPickerView!
+    
+    
+    @IBOutlet weak var weightPickerView: UIPickerView!
     
     
     override func viewDidLoad() {
