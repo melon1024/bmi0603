@@ -11,6 +11,12 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     
+    class func doDiv100(u: Int) -> Double {
+        return Double(u) * 0.01
+    }
+    class func doDiv2(u: Int) -> Double {
+        return Double(u) * 0.5
+    }
     var weight : Double? = 0.0
     var height : Double? = 0.0
     
@@ -23,6 +29,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             }
         }
     }
+    
+    let listOfHeightsInM  = Array(140...220).map(ViewController.doDiv100)
+    let listOfWeightsInKg = Array(80...240).map(ViewController.doDiv2)
+    
+    
+    
     
     @IBOutlet weak var bmiLabel: UILabel!
     
@@ -59,7 +71,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     func updateUI() {
         if let b = self.bmi {
             self.bmiLabel.text = String(format: "%4.1f",b)
-            print ( b, self.bmi )
         }
     }
     
@@ -68,7 +79,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         guard let txt: String = textField.text else {
           return
         }
-        print(" 1: ")
         func conv(numSring: String) -> Double? {
             let result : Double? = NSNumberFormatter().numberFromString(numSring)?.doubleValue
             return result
@@ -77,15 +87,57 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             switch( textField) {
             case heightTextField:
                 self.height = conv(txt)
-                print("2")
             case weightTextField:
                 self.weight = conv(txt)
-                print("3")
             default:
                 print(" Something Wrong")
             }
-           print("4")
           updateUI()
+    }
+    
+    // PickerViewDataSource
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        switch (pickerView) {
+        case heightPickerView:
+            return self.listOfHeightsInM.count
+        case weightPickerView:
+            return self.listOfWeightsInKg.count
+        default:
+            return 1
+        
+        }
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch (pickerView) {
+        case heightPickerView:
+            return String(format: "%4.2f",self.listOfHeightsInM[row])
+        case weightPickerView:
+            return String(format: "%4.1f", self.listOfWeightsInKg[row])
+        default:
+            return ""
+            
+        }
+
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch (pickerView) {
+        case heightPickerView:
+            self.height = self.listOfHeightsInM[row]
+        case weightPickerView:
+            self.weight = self.listOfWeightsInKg[row]
+        default:
+            break
+            
+        }
+
+        updateUI()
     }
 }
 
